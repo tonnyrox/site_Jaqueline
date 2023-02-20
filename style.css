@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: 'Poppins',sans-serif;
+}
+ body{
+     min-height: 100vh;
+     background-image: linear-gradient(to bottom right, #f39e00f3 10%, #9f6bff 40%,#ff0022 50%,#ff04c9 100%);
+     background-size: 250% 300%;
+     animation: float 3s linear infinite alternate;
+}
+ @keyframes float {
+     from{
+        background-position: 0 0 ;
+    }
+     to{
+        background-position: 100% 100%;
+    }
+}
+ nav{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     height: 100px;
+     width: 100% 
+}
+ nav .menu-icon{
+     cursor: pointer;
+     display: none;
+}
+ nav .logo a{
+     font-size: 30px;
+     font-weight: bold;
+     color: #ffffff;
+     text-decoration: none;
+}
+ nav ul{
+     display: flex;
+     list-style: none;
+     align-items: center;
+}
+ nav ul li{
+     padding: 0 18px;
+}
+ nav ul li a{
+     text-decoration: none;
+     font-size: 20px;
+     text-transform: uppercase;
+     color: #ffffff;
+}
+ @media (max-width:970px) {
+     nav .menu-icon{
+         display: block;
+    }
+     nav ul{
+         position: fixed;
+         width: 60%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         transform: translateX(-100%);
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: center;
+         transition: 0.3s ease-in;
+         background-color: #ff009d;
+    }
+     nav ul.active{
+         transform: translateX(0);
+    }
+     nav ul li{
+         padding: 10px;
+    }
+     nav ul li a{
+         font-size: 18px;
+         color: white;
+    }
+}
+/*ssss*/
+ .capa{
+     display: flex;
+     background-size: cover 
+}
+ .capa img {
+     width: 100%;
+}
+ .trabalhos {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     align-self: center;
+}
+ .trabalhos img {
+     height: 55vh;
+     border-radius: 18px;
+     padding: 2px;
+}
+/* whtsap botão*/
+ .whatsapp {
+     position: fixed;
+     top: 83%;
+     right: -2%;
+     padding: 50px;
+     z-index: 10000000;
+}
